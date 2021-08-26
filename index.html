@@ -39,7 +39,7 @@
     <main id="app" class="d-flex justify-content-center align-items-center h-100">
         <section class="w-100 h-100 d-flex">
             <div id="chats-bar" class="d-flex flex-column">
-                <div id="user" class="top-contact d-flex justify-content-between align-items-center p-3">
+                <div id="user" class="bg-gray d-flex justify-content-between align-items-center p-3">
                     <div>
                         <img src="./img/avatar_io.jpg" alt="utente" id="user-image" class="profile-image">
                         <span>Nome Utente</span>
@@ -79,7 +79,49 @@
 
                 </div>
             </div>
-            <div id="chat" class="flex-grow-1"></div>
+            <div id="chat" class="flex-grow-1 d-flex flex-column border-start border-secondary">
+                <div class="bg-gray d-flex justify-content-between align-items-center p-3 chat-user">
+                    <div>
+                        <img src="./img/avatar_1.jpg" alt="michele" class="profile-image">
+                        <span>Michele</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-search fa-2x"></i>
+                        <i class="fas fa-paperclip fa-2x"></i>
+                        <i class="fas fa-ellipsis-v fa-2x"></i>
+                    </div>
+                </div>
+                <div id="chat-screen" class="flex-grow-1 pt-4 px-3">
+                    <div class="d-flex user-message message w-100 px-3 py-1">
+                        <div class="pt-3 px-3 pb-1">
+                            <p class="m-0">Hai portato a spasso il cane?</p>
+                            <div class="date">10/01/2020 15:30:55</div>
+                        </div>
+                    </div>
+                    <div class="d-flex user-message message w-100 p-3">
+                        <div class="pt-3 px-3 pb-1">
+                            <p class="m-0">Ricordati di dargli da mangiare</p>
+                            <div class="date">10/01/2020 15:50:00</div>
+                        </div>
+                    </div>
+                    <div class="d-flex friend-message message w-100 p-3">
+                        <div class="pt-3 px-3 pb-1">
+                            <p class="m-0">Ricordati di dargli da mangiare</p>
+                            <div class="date">10/01/2020 15:50:00</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="send-message" class=" bg-gray py-3 d-flex justify-content-between align-items-center">
+                    <div class="mx-3">
+                        <i class="fas fa-smile fa-2x"></i>
+                    </div>
+                    <div class="flex-grow-1 h-100">
+                        <input type="textarea" id="message-to-send" placeholder="Scrivi un messaggio..." class="h-100">
+                    </div>
+                    <div class="mx-3">
+                        <i class="fas fa-microphone fa-2x"></i>
+                    </div>
+                </div>
         </section>
     </main>
 

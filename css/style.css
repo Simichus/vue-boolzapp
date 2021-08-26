@@ -17,14 +17,38 @@ body {
   border-radius: 50%;
 }
 
-.top-contact {
+.bg-gray {
   background-color: #eaeaea;
 }
 
-#chats-bar .fas {
+#chats-bar .fas,
+#chat .chat-user .fas {
   color: #b1b1b1;
   margin: 0 5px;
   cursor: pointer;
+}
+
+.user-message {
+  justify-content: flex-end;
+}
+
+[class*="message"] div {
+  border-radius: 10px;
+  min-width: 250px;
+}
+
+.user-message div {
+  background-color: #d5f9ba;
+}
+
+.friend-message div {
+  background: #fff;
+}
+
+.date {
+  color: #b9c1ba;
+  font-size: 10px;
+  text-align: right;
 }
 
 /* main */
@@ -37,7 +61,8 @@ main {
   width: 40%;
 }
 
-#user-image {
+#user-image,
+#chat .chat-user img {
   height: 50px;
 }
 
@@ -83,4 +108,21 @@ main {
 
 #user-chats > div:hover {
   background-color: rgb(233, 233, 233);
+}
+
+#chat-screen {
+  background-image: url("../img/mine.jpg");
+  overflow-y: auto;
+}
+
+#send-message .fas {
+  color: gray;
+}
+
+#message-to-send {
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
 }

@@ -7,5 +7,6 @@ const app = new Vue({
   data: {
     user: user,
     contacts: contacts,
+    messageToSend: "",
   },
 });

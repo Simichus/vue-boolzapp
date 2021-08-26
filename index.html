@@ -116,10 +116,14 @@
                         <i class="fas fa-smile fa-2x"></i>
                     </div>
                     <div class="flex-grow-1 h-100">
-                        <input type="textarea" id="message-to-send" placeholder="Scrivi un messaggio..." class="h-100">
+                        <input type="textarea" id="message-to-send" v-model="messageToSend"
+                            placeholder="Scrivi un messaggio..." class="h-100">
                     </div>
-                    <div class="mx-3">
+                    <div v-if="!messageToSend" class="mx-3">
                         <i class="fas fa-microphone fa-2x"></i>
+                    </div>
+                    <div v-else class="mx-3">
+                        <i class="fas fa-paper-plane fa-2x"></i>
                     </div>
                 </div>
         </section>

@@ -21,7 +21,7 @@ body {
   background-color: #eaeaea;
 }
 
-.top-contact .fas {
+#chats-bar .fas {
   color: #b1b1b1;
   margin: 0 5px;
   cursor: pointer;
@@ -39,4 +39,39 @@ main {
 
 #user-image {
   height: 50px;
+}
+
+#desktop-notify-alert {
+  background-color: #8edafc;
+}
+
+.bell {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  background: white;
+}
+
+#chats-bar .fa-bell-slash {
+  color: #8edafc;
+}
+
+#desktop-notify-alert a {
+  color: #637d8b;
+}
+
+#desktop-notify-alert a:hover {
+  color: #3f4f58;
+}
+
+#chat-filter {
+  background-color: #fafafa;
+}
+
+#chat-filter input:focus {
+  color: none;
+  background-color: none;
+  border-color: #ced4da;
+  outline: none;
+  box-shadow: none;
 }

@@ -1,0 +1,42 @@
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(#009688 20%, #d8dbd5 0, #d8dbd5);
+  font-family: "PT Sans", sans-serif;
+}
+/* utils */
+.profile-image {
+  height: 75px;
+  border-radius: 50%;
+}
+
+.top-contact {
+  background-color: #eaeaea;
+}
+
+.top-contact .fas {
+  color: #b1b1b1;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* main */
+
+main {
+  padding: 20px 200px;
+}
+
+#chats-bar {
+  width: 40%;
+}
+
+#user-image {
+  height: 50px;
+}

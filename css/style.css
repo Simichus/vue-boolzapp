@@ -75,3 +75,12 @@ main {
   outline: none;
   box-shadow: none;
 }
+
+#user-chats {
+  overflow-y: scroll;
+  cursor: pointer;
+}
+
+#user-chats > div:hover {
+  background-color: rgb(233, 233, 233);
+}

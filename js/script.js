@@ -1,6 +1,5 @@
-console.log(Vue);
-
 Vue.config.devtools = true;
+dayjs.extend(dayjs_plugin_customParseFormat);
 
 const app = new Vue({
   el: "#app",
@@ -12,6 +11,8 @@ const app = new Vue({
     currentFiltered: contacts,
     activeChatName: "",
     activeChatAvatar: "",
+    activeChatIndex: 0,
+    writingStatus: `Ultimo accesso oggi alle ${dayjs().format("HH:mm")}`,
   },
   methods: {
     chatsFiltered(filter) {
@@ -33,6 +34,26 @@ const app = new Vue({
       this.contacts[index].visible = true;
       this.activeChatName = this.contacts[index].name;
       this.activeChatAvatar = this.contacts[index].avatar;
+      this.activeChatIndex = index;
+    },
+    sendMessage() {
+      this.contacts[this.activeChatIndex].messages.push({
+        date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
+        message: this.messageToSend,
+        status: "sent",
+      });
+      this.messageToSend = "";
+      this.writingStatus = "Sta scrivendo...";
+      setTimeout(() => {
+        this.contacts[this.activeChatIndex].messages.push({
+          date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
+          message: "Ok",
+          status: "received",
+        });
+        this.writingStatus = `Ultimo accesso oggi alle ${dayjs().format(
+          "HH:mm"
+        )}`;
+      }, 1000);
     },
   },
   created() {

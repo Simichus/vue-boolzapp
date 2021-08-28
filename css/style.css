@@ -46,10 +46,18 @@ body {
   background: #fff;
 }
 
-.date {
+.date,
+.writing-status {
   color: #b9c1ba;
-  font-size: 10px;
   text-align: right;
+}
+
+.date {
+  font-size: 10px;
+}
+
+.writing-status {
+  font-size: 13px;
 }
 
 /* main */

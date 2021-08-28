@@ -28,20 +28,21 @@ body {
   cursor: pointer;
 }
 
-.user-message {
+.sent {
   justify-content: flex-end;
 }
 
-[class*="message"] div {
+.sent div,
+.received div {
   border-radius: 10px;
   min-width: 250px;
 }
 
-.user-message div {
+.sent div {
   background-color: #d5f9ba;
 }
 
-.friend-message div {
+.received div {
   background: #fff;
 }
 

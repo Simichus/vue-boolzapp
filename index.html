@@ -72,7 +72,8 @@
                     </nav>
                 </div>
                 <div id="user-chats" class=" flex-grow-1 bg-white">
-                    <div v-for="(contact, index) in contacts" class="p-3 border-top" @click="activeChat(index)">
+                    <div v-for="(contact, index) in contacts" v-if="chatsFiltered(contact, index)"
+                        class="p-3 border-top" @click="activeChat(index)">
                         <img :src="`./img/avatar${contact.avatar}.jpg`" class="profile-image">
                         <span>{{contact.name}}</span>
                     </div>

@@ -8,24 +8,20 @@ const app = new Vue({
     contacts: contacts,
     messageToSend: "",
     filter: "",
-    currentFiltered: contacts,
     activeChatName: "",
     activeChatAvatar: "",
     activeChatIndex: 0,
     writingStatus: `Ultimo accesso oggi alle ${dayjs().format("HH:mm")}`,
   },
   methods: {
-    chatsFiltered(filter) {
-      if (!filter.trim()) {
-        this.currentFiltered = this.contacts;
-      } else {
-        this.currentFiltered = [];
-        this.contacts.forEach((contact) => {
-          if (contact.name.contains(filter)) {
-            this.currentFiltered.push(contact);
-          }
-        });
+    chatsFiltered(contact) {
+      if (
+        this.filter.trim() === "" ||
+        contact.name.toLowerCase().includes(this.filter.toLowerCase())
+      ) {
+        return true;
       }
+      return false;
     },
     activeChat(index) {
       this.contacts.forEach((contact) => {
